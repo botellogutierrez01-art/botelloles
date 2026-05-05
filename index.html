@@ -78,7 +78,7 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .highlight::after { content: ''; position: absolute; width: 100%; height: 35%; bottom: 8px; left: 0; background-color: var(--color-pink); z-index: -1; opacity: 0.6; border-radius: 4px; }
 .hero p { font-size: 1.3rem; margin-bottom: 2.5rem; color: #333; }
 
-/* Elegant Art replaces Kirby */
+/* Elegant Art matches the pink/black colors */
 .hero-art-container { flex: 1; display: flex; justify-content: center; align-items: center; }
 .elegant-blob {
   width: 320px; height: 320px; background: var(--color-pink);
@@ -86,8 +86,7 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
   border: 4px solid var(--color-black);
   animation: morph 8s ease-in-out infinite, float 4s ease-in-out infinite;
   box-shadow: 12px 12px 0 var(--color-black);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 5rem; color: var(--color-black); font-family: var(--font-display);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
 }
 
 @keyframes float { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-30px) rotate(3deg); } 100% { transform: translateY(0px) rotate(0deg); } }
@@ -174,8 +173,11 @@ footer { text-align: center; padding: 2.5rem; background-color: var(--color-beig
       </div>
 
       <div class="hero-art-container">
-        <!-- Abstract aesthetic blob -->
-        <div class="elegant-blob">✦</div>
+        <!-- YOUR PICTURE BLOB -->
+        <div class="elegant-blob">
+           <!-- THIS WILL PULL YOUR PICTURE IN -->
+           <img src="My%20Photo.JPG" alt="Lesli's Profile Picture" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
       </div>
     </section>
 
@@ -298,4 +300,3 @@ document.addEventListener("DOMContentLoaded", () => {
   </script>
 </body>
 </html>
-<img src="Assets/My%20Photo.JPG" alt="Profile Picture" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 4px solid #1A1A1A;">
