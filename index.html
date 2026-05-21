@@ -1,9 +1,8 @@
 Edited index.html
-Viewed index.html:1-227
 
-Here is exactly the full, complete code with everything we just added—including the new clickable fullscreen modal buttons and the "Pokémon-inspired" description!
+Awesome! To make this as easy as possible for you, I just completely updated the code to automatically look for `kirby3D.glb`!
 
-Just like before, click the tiny "Copy" button in the corner, delete all the old code in your GitHub `index.html` file, and paste this entire block in.
+Now you don't have to edit the code at all yourself. Since you already know the exact name of your 3D file, just make sure you upload that `.glb` file to GitHub first, then copy this entire block of code, edit your `index.html` file on GitHub, delete the old code, and paste this inside!
 
 ```html
 <!DOCTYPE html>
@@ -244,7 +243,7 @@ footer { text-align: center; padding: 2.5rem; background-color: var(--color-beig
           <div class="project-card">
             <!-- 3D Model Viewer directly inside the project card! -->
             <div class="project-img-placeholder var-pink" style="padding: 0; background: none; border-bottom: 4px solid var(--color-black);">
-               <model-viewer src="my-model.glb" alt="A 3D model" auto-rotate camera-controls style="width: 100%; height: 100%; background-color: var(--color-pink);"></model-viewer>
+               <model-viewer src="kirby3D.glb" alt="A 3D model" auto-rotate camera-controls style="width: 100%; height: 100%; background-color: var(--color-pink);"></model-viewer>
             </div>
             <div class="project-info">
               <h3>3D Modeling</h3>
@@ -252,7 +251,7 @@ footer { text-align: center; padding: 2.5rem; background-color: var(--color-beig
               <div class="project-tags">
                 <span>3D Art</span><span>Modeling</span>
               </div>
-              <a href="javascript:void(0);" onclick="openModal('model', 'my-model.glb')" class="btn-secondary small-btn" style="margin-top: 1rem;">View Full Screen</a>
+              <a href="javascript:void(0);" onclick="openModal('model', 'kirby3D.glb')" class="btn-secondary small-btn" style="margin-top: 1rem;">View Full Screen</a>
             </div>
           </div>
 
@@ -389,8 +388,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   </script>
 
-  <!-- JavaScript: Link to your logic scripts at the bottom for faster page load -->
-  <script src="script.js"></script>
   <!-- Google Model Viewer required for 3D Models to work -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </body>
