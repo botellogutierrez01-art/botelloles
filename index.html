@@ -1,10 +1,3 @@
-Edited index.html
-
-Perfect! I have placed the picture perfectly inside the big pink blob at the very top of your website.
-
-Here is your updated code! Upload your `Deltarune.jpg` file into GitHub first, and then paste this code in exactly like you've been doing!
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,8 +69,25 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .btn-secondary { background-color: transparent; color: var(--color-black); }
 .btn-secondary:hover { background-color: var(--color-pink); box-shadow: 3px 3px 0 var(--color-black); transform: translate(-1px, -1px); }
 
-.hero { min-height: 100vh; display: flex; align-items: center; justify-content: space-between; padding: 0 8%; max-width: 1400px; margin: 0 auto; gap: 2rem; padding-top: 80px; }
-.hero-content { flex: 1; max-width: 600px; animation: slideUp 1s ease-out; }
+/* --- HERO SECTION BACKGROUND MODIFICATION --- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centering the content */
+  text-align: center; /* Centering the text */
+  padding: 0 8%;
+  padding-top: 80px;
+
+  /* Setting the image as the background with a 65% transparent beige overlay */
+  background-image: linear-gradient(rgba(249, 228, 212, 0.65), rgba(249, 228, 212, 0.65)), url('Deltarune.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero-content { flex: 1; max-width: 800px; animation: slideUp 1s ease-out; }
+/* ------------------------------------------ */
+
 .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: var(--color-black); }
 .highlight { color: var(--color-pink-hot); position: relative; display: inline-block; }
 .highlight::after { content: ''; position: absolute; width: 100%; height: 35%; bottom: 8px; left: 0; background-color: var(--color-pink); z-index: -1; opacity: 0.6; border-radius: 4px; }
@@ -186,12 +196,7 @@ footer { text-align: center; padding: 2.5rem; background-color: var(--color-beig
         </div>
       </div>
 
-      <div class="hero-art-container">
-        <!-- Front cover art blob -->
-        <div class="elegant-blob" style="overflow: hidden; padding: 0;">
-          <img src="Deltarune.jpg" alt="Deltarune Cover Art" style="width: 100%; height: 100%; object-fit: cover;">
-        </div>
-      </div>
+      <!-- We deleted the <div class="hero-art-container"> completely here, and centered all the text to sit perfectly over your image! -->
     </section>
 
     <!-- Marquee Banner -->
@@ -394,4 +399,3 @@ document.addEventListener("DOMContentLoaded", () => {
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 </body>
 </html>
-```
